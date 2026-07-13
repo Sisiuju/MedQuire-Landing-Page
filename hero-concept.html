@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MedQuire Flagship Hero Prototype</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="design-tokens.css">
+  <link rel="stylesheet" href="hero-concept.css">
+</head>
+<body>
+  <div class="prototype-container">
+    <div class="hero-split-grid">
+      <!-- Left Column: Contextual Hero Content -->
+      <div class="hero-left-content">
+        <div class="brand-header">
+          <span class="logo-circle"></span>
+          <span class="brand-name">MedQuire</span>
+        </div>
+        <span class="hero-badge">✨ Powered by MedQuire AI</span>
+        <h1 class="hero-heading">Understand your medication. <span class="blue-gradient-text">Clear & simple.</span></h1>
+        <p class="hero-description">
+          MedQuire uses secure AI to turn confusing drug labels and clinical sheets into plain language. Refine your dosages, check drug interactions, and take medications with absolute peace of mind.
+        </p>
+        <div class="hero-buttons">
+          <a href="#" class="btn btn-primary">Download App</a>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Luminous Quire Visual -->
+      <div class="hero-right-visual">
+        <div class="hero-visual-wrapper" id="heroVisual">
+          <!-- Layer 1: Ambient Glow Fields -->
+          <div class="visual-layer layer-glow">
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+          </div>
+          
+          <!-- Layer 2: Medical/Molecular Ecosystem -->
+          <div class="visual-layer layer-ecosystem">
+            <svg class="ecosystem-svg" viewBox="0 0 400 400" width="100%" height="100%">
+              <path class="ecg-path" d="M 0,200 L 100,200 L 110,180 L 120,220 L 130,130 L 140,260 L 150,190 L 160,205 L 170,200 L 400,200" />
+              <line class="mol-link" x1="50" y1="100" x2="120" y2="80" />
+              <line class="mol-link" x1="120" y1="80" x2="180" y2="120" />
+              <circle class="mol-node" cx="50" cy="100" r="4" />
+              <circle class="mol-node" cx="120" cy="80" r="5" />
+              <circle class="mol-node" cx="180" cy="120" r="4" />
+              <text class="floating-symbol symbol-1" x="60" y="310">✚</text>
+              <text class="floating-symbol symbol-2" x="280" y="80">Rₓ</text>
+              <text class="floating-symbol symbol-3" x="310" y="270">⚠️</text>
+            </svg>
+          </div>
+
+          <!-- Layer 3: Dynamic Knowledge Ribbons -->
+          <div class="visual-layer layer-ribbons">
+            <svg class="ribbons-svg" viewBox="0 0 400 400" width="100%" height="100%">
+              <defs>
+                <linearGradient id="ribbonGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#4077F1" stop-opacity="0.8" />
+                  <stop offset="100%" stop-color="#0B348E" stop-opacity="0.1" />
+                </linearGradient>
+              </defs>
+              <path class="knowledge-ribbon ribbon-1" d="M -50,180 Q 100,60 200,200 T 450,220" />
+              <path class="knowledge-ribbon ribbon-2" d="M -50,220 Q 150,340 200,200 T 450,180" />
+            </svg>
+          </div>
+
+          <!-- Layer 4: Conversational Stage -->
+          <div class="visual-layer layer-conversational">
+            <div class="query-bubble" id="queryBubble">
+              <span class="query-text" id="queryText">Can I take Lisinopril with Ibuprofen?</span>
+            </div>
+            <div class="particle-field" id="particleField"></div>
+          </div>
+
+          <!-- Layer 5: Luminous Glass Quire (Central Anchor) -->
+          <div class="visual-layer layer-quire">
+            <div class="quire-structure" id="quireStructure">
+              <div class="quire-page page-left"></div>
+              <div class="quire-page page-center">
+                <div class="ai-kernel" id="aiKernel"></div>
+              </div>
+              <div class="quire-page page-right"></div>
+            </div>
+          </div>
+
+          <!-- Layer 6: Floating Knowledge Cards -->
+          <div class="visual-layer layer-cards" id="cardsLayer">
+            <!-- Card 1 -->
+            <div class="info-card card-1 glass-card" id="infoCard1">
+              <span class="card-pill" id="cardPill1">What it does</span>
+              <p id="cardDesc1">Widens blood vessels to lower high blood pressure safely.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="info-card card-2 glass-card" id="infoCard2">
+              <span class="card-pill" id="cardPill2">Key Warning</span>
+              <p id="cardDesc2">Do not take if pregnant. Can cause a dry tickly cough.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="info-card card-3 glass-card" id="infoCard3">
+              <span class="card-pill" id="cardPill3">Drug Interactions</span>
+              <p id="cardDesc3">Avoid taking with Ibuprofen without doctor guidance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Javascript -->
+  <script src="hero-concept.js"></script>
+</body>
+</html>
