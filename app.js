@@ -207,62 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
     revealObserver.observe(element);
   });
 
-  // =========================================================================
-  // 3. STATS COUNT-UP ANIMATION
-  // =========================================================================
-  const statsSection = document.querySelector('.stats-section');
-  const statNumbers = document.querySelectorAll('.stat-number');
-  let statsAnimated = false;
 
-  const animateStats = () => {
-    statNumbers.forEach(stat => {
-      const target = parseInt(stat.getAttribute('data-target'), 10);
-      const suffix = stat.getAttribute('data-suffix') || '';
-      const duration = 1500; // 1.5 seconds animation duration
-      const startTime = performance.now();
-      
-      const updateNumber = (currentTime) => {
-        const elapsedTime = currentTime - startTime;
-        const progress = Math.min(elapsedTime / duration, 1);
-        
-        // Easing function (outQuad)
-        const easeProgress = progress * (2 - progress);
-        
-        const currentValue = Math.floor(easeProgress * target);
-        
-        if (suffix === 's') {
-          stat.textContent = `< ${currentValue}s`;
-        } else {
-          stat.textContent = `${currentValue}${suffix}`;
-        }
-        
-        if (progress < 1) {
-          requestAnimationFrame(updateNumber);
-        } else {
-          if (suffix === 's') {
-            stat.textContent = `< ${target}s`;
-          } else {
-            stat.textContent = `${target}${suffix}`;
-          }
-        }
-      };
-      
-      requestAnimationFrame(updateNumber);
-    });
-  };
-
-  if (statsSection) {
-    const statsObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !statsAnimated) {
-          animateStats();
-          statsAnimated = true;
-        }
-      });
-    }, { threshold: 0.3 });
-
-    statsObserver.observe(statsSection);
-  }
 
 
 
