@@ -459,173 +459,149 @@
     <!-- 3. FEATURE HIGHLIGHTS SECTION -->
     <section class="features-section section-padding" id="features">
       <div class="container">
-        
-        <div class="section-header reveal">
-          <span class="section-label">App Features</span>
-          <h2>Everything you need for peace of mind</h2>
-          <p class="section-desc">Designed to be simple, medically accurate, and completely focused on patient understanding.</p>
-        </div>
-
-        <div class="features-grid">
+        <div class="features-layout">
+          <!-- Left Column -->
+          <div class="features-left reveal">
+            <span class="section-label features-badge">APP FEATURES</span>
+            <h2 class="features-heading">Everything<br>you need.</h2>
+            <p class="features-subtext">MedQuire is designed to make medication information simple, useful, and trustworthy.</p>
+          </div>
           
-          <!-- Feature 1: Drug Search with Autocomplete -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-visual">
-              <svg viewBox="0 0 160 100" width="100%" height="80">
-                <rect x="10" y="15" width="140" height="28" rx="8" fill="var(--bg-primary)" stroke="rgba(64,119,241,0.2)" stroke-width="1.5" />
-                <circle cx="24" cy="29" r="5" fill="none" stroke="var(--accent-teal)" stroke-width="1.5" />
-                <line x1="28" y1="33" x2="33" y2="38" stroke="var(--accent-teal)" stroke-width="1.5" stroke-linecap="round" />
-                <text x="40" y="32" font-family="Outfit" font-size="10" font-weight="600" fill="var(--text-primary)">Para|</text>
-                <!-- Autocomplete Suggestions Dropdown -->
-                <rect x="10" y="48" width="140" height="42" rx="8" fill="#FFFFFF" stroke="rgba(64,119,241,0.12)" stroke-width="1" filter="drop-shadow(0 4px 12px rgba(11,52,142,0.04))" />
-                <text x="20" y="62" font-family="Inter" font-size="9" font-weight="600" fill="var(--accent-teal)">Paracetamol</text>
-                <text x="20" y="78" font-family="Inter" font-size="9" font-weight="500" fill="var(--text-secondary)">Paroxetine</text>
-              </svg>
-            </div>
-            <h3>Drug Search with Autocomplete</h3>
-            <p>Type the first few letters of any prescription or over-the-counter medicine to find its details instantly.</p>
-          </div>
+          <!-- Right Column -->
+          <div class="features-right reveal delay-100">
+            <div class="features-grid-new">
+              
+              <!-- Feature 1: Drug Search -->
+              <div class="feature-item-new">
+                <div class="feature-icon-badge badge-blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
+                </div>
+                <h4 class="feature-title-new">Instant Drug Search</h4>
+                <p class="feature-desc-new">Find any medication quickly with smart autocomplete search.</p>
+              </div>
 
-          <!-- Feature 2: ELI12 Mode -->
-          <div class="glass-card feature-card reveal delay-100">
-            <div class="feature-visual">
-              <svg viewBox="0 0 160 100" width="100%" height="80">
-                <!-- Toggle Switch Graphic -->
-                <rect x="35" y="20" width="90" height="32" rx="16" fill="var(--accent-teal-soft)" stroke="rgba(64,119,241,0.15)" stroke-width="1" />
-                <circle cx="51" cy="36" r="12" fill="var(--accent-teal)" />
-                <text x="47" y="40" font-family="Outfit" font-size="11" font-weight="700" fill="#FFFFFF">12</text>
-                <text x="75" y="40" font-family="Outfit" font-size="10" font-weight="700" fill="var(--text-secondary)">ELI12</text>
-                <!-- Translation bubble -->
-                <rect x="20" y="62" width="120" height="28" rx="8" fill="var(--bg-primary)" />
-                <text x="30" y="79" font-family="Inter" font-size="8" font-weight="500" fill="var(--text-secondary)">"Helps relax your blood pipes."</text>
-              </svg>
-            </div>
-            <h3>ELI12 Simplification Mode</h3>
-            <p>Confused by complex medical terms? Tap the ELI12 toggle to translate labels into friendly child-like analogies.</p>
-          </div>
+              <!-- Feature 2: Interaction Checker -->
+              <div class="feature-item-new">
+                <div class="feature-icon-badge badge-teal">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h4 class="feature-title-new">Drug Interaction Check</h4>
+                <p class="feature-desc-new">Identify potential interactions before they become a problem.</p>
+              </div>
 
-          <!-- Feature 3: Personal Medicine Cabinet -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-visual">
-              <svg viewBox="0 0 160 100" width="100%" height="80">
-                <!-- Cabinet shelf -->
-                <line x1="10" y1="75" x2="150" y2="75" stroke="rgba(64,119,241,0.25)" stroke-width="3" stroke-linecap="round" />
-                <!-- Pill bottle 1 -->
-                <rect x="40" y="30" width="22" height="42" rx="4" fill="var(--accent-teal-soft)" stroke="var(--accent-teal)" stroke-width="1.2" />
-                <rect x="43" y="24" width="16" height="6" rx="1" fill="#FFFFFF" stroke="var(--accent-teal)" stroke-width="1" />
-                <rect x="44" y="42" width="14" height="18" fill="#FFFFFF" />
-                <!-- Pill bottle 2 -->
-                <rect x="75" y="20" width="26" height="52" rx="6" fill="var(--bg-primary)" stroke="rgba(11,52,142,0.12)" stroke-width="1.5" />
-                <rect x="80" y="14" width="16" height="6" rx="1" fill="var(--accent-teal-soft)" stroke="rgba(11,52,142,0.12)" stroke-width="1" />
-                <rect x="79" y="35" width="18" height="24" rx="2" fill="var(--accent-teal)" opacity="0.8" />
-                <line x1="83" y1="47" x2="93" y2="47" stroke="#FFFFFF" stroke-width="2" />
-              </svg>
-            </div>
-            <h3>Personal Medicine Cabinet</h3>
-            <p>Save active prescriptions to your device for quick access, refill deadlines, and localized warnings.</p>
-          </div>
+              <!-- Feature 3: ELI12 Mode -->
+              <div class="feature-item-new">
+                <div class="feature-icon-badge badge-orange">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A7.5 7.5 0 0 0 3 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path>
+                    <line x1="9" y1="18" x2="15" y2="18"></line>
+                    <line x1="10" y1="22" x2="14" y2="22"></line>
+                  </svg>
+                </div>
+                <h4 class="feature-title-new">Explain Like I'm 12</h4>
+                <p class="feature-desc-new">Complex medical terms translated into simple, plain language.</p>
+              </div>
 
-          <!-- Feature 4: Drug Interaction Checker -->
-          <div class="glass-card feature-card reveal delay-100">
-            <div class="feature-visual">
-              <svg viewBox="0 0 160 100" width="100%" height="80">
-                <!-- Connecting link -->
-                <path d="M 40,50 L 120,50" stroke="rgba(64,119,241,0.15)" stroke-width="1.5" stroke-dasharray="4 4" />
-                <!-- Pill 1 -->
-                <g transform="translate(40, 50) rotate(30)">
-                  <rect x="-10" y="-20" width="20" height="40" rx="10" fill="var(--accent-teal)" />
-                  <rect x="-10" y="0" width="20" height="20" rx="10" fill="#FFFFFF" stroke="var(--accent-teal)" stroke-width="1" />
-                </g>
-                <!-- Pill 2 -->
-                <g transform="translate(120, 50) rotate(-30)">
-                  <rect x="-10" y="-20" width="20" height="40" rx="10" fill="#FFFFFF" stroke="var(--accent-teal)" stroke-width="1.2" />
-                  <rect x="-10" y="0" width="20" height="20" rx="10" fill="var(--accent-teal-hover)" />
-                </g>
-                <!-- Check badge at center -->
-                <circle cx="80" cy="50" r="14" fill="#00E676" />
-                <path d="M 76,50 L 79,53 L 85,47" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" />
-              </svg>
-            </div>
-            <h3>Drug Interaction Checker</h3>
-            <p>Instantly highlights safety red flags and dangerous combination alerts before taking multiple medications.</p>
-          </div>
+              <!-- Feature 4: Safety Alerts -->
+              <div class="feature-item-new">
+                <div class="feature-icon-badge badge-blue">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    <polyline points="9 11 11 13 15 9"></polyline>
+                  </svg>
+                </div>
+                <h4 class="feature-title-new">Safety Alerts</h4>
+                <p class="feature-desc-new">Instantly highlights safety red flags and dangerous combination alerts before taking multiple medications.</p>
+              </div>
 
-          <!-- Feature 5: Exportable Summary Card -->
-          <div class="glass-card feature-card reveal">
-            <div class="feature-visual">
-              <svg viewBox="0 0 160 100" width="100%" height="80">
-                <!-- Summary Card Outline -->
-                <rect x="30" y="15" width="100" height="66" rx="10" fill="var(--bg-primary)" stroke="rgba(64,119,241,0.2)" stroke-width="1.2" filter="drop-shadow(0 4px 12px rgba(11,52,142,0.04))" />
-                <rect x="40" y="27" width="40" height="8" rx="2" fill="var(--accent-teal)" />
-                <line x1="40" y1="44" x2="120" y2="44" stroke="rgba(11,52,142,0.12)" stroke-width="2" stroke-linecap="round" />
-                <line x1="40" y1="52" x2="105" y2="52" stroke="rgba(11,52,142,0.12)" stroke-width="2" stroke-linecap="round" />
-                <line x1="40" y1="60" x2="112" y2="60" stroke="rgba(11,52,142,0.12)" stroke-width="2" stroke-linecap="round" />
-                <!-- Share arrow button -->
-                <circle cx="112" cy="30" r="10" fill="var(--accent-teal-soft)" />
-                <path d="M 109,30 L 115,30 M 112,27 L 115,30 L 112,33" fill="none" stroke="var(--accent-teal)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <h3>Exportable Summary Card</h3>
-            <p>Generate a neat, shareable summary card of your medications to show doctors or print for family members.</p>
-          </div>
+              <!-- Feature 5: Medicine Cabinet -->
+              <div class="feature-item-new">
+                <div class="feature-icon-badge badge-purple">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h4 class="feature-title-new">Your Medicine Cabinet</h4>
+                <p class="feature-desc-new">Keep all your medications organized and accessible in one place.</p>
+              </div>
 
+              <!-- Feature 6: Exportable Summary -->
+              <div class="feature-item-new">
+                <div class="feature-icon-badge badge-amber">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <line x1="16" y1="13" x2="8" y2="13"></line>
+                    <line x1="16" y1="17" x2="8" y2="17"></line>
+                    <polyline points="10 9 9 9 8 9"></polyline>
+                  </svg>
+                </div>
+                <h4 class="feature-title-new">Exportable Summary</h4>
+                <p class="feature-desc-new">Save and share a clear summary card of your medication details.</p>
+              </div>
+
+            </div>
+          </div>
         </div>
-
       </div>
     </section>
 
     <!-- 4. WHO IT'S FOR SECTION -->
     <section class="audience-section section-padding" id="who-it-is-for">
       <div class="container">
-        
-        <div class="section-header reveal">
-          <span class="section-label">Target Audience</span>
-          <h2>Built for everyone who takes medicine</h2>
-          <p class="section-desc">Health literacy shouldn't require a medical degree. MedQuire helps make health safe and accessible for all.</p>
-        </div>
-
-        <div class="audience-carousel-container reveal delay-100">
-          <div class="audience-carousel" id="audienceCarousel">
-            
-            <!-- Card 1 -->
-            <div class="audience-card">
-              <div class="audience-avatar-container">👴</div>
-              <h3>Prescription Managers</h3>
-              <p>Adults managing multiple daily medications for chronic conditions like high blood pressure, cholesterol, or diabetes who want clarity on safety guidelines.</p>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="audience-card">
-              <div class="audience-avatar-container">👩‍👧‍👦</div>
-              <h3>Caregivers</h3>
-              <p>People managing care details for elderly parents or children who need a quick reference to check drug mixtures, dosages, and side effects.</p>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="audience-card">
-              <div class="audience-avatar-container">🗣️</div>
-              <h3>Non-Native Speakers</h3>
-              <p>Individuals who speak English as a second language and struggle with advanced clinical terminology in medical pamphlets.</p>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="audience-card">
-              <div class="audience-avatar-container">📘</div>
-              <h3>Low-Literacy Users</h3>
-              <p>Patients who find typical medical jargon confusing and want straightforward, digestible guidance and answers.</p>
-            </div>
-
+        <div class="audience-layout">
+          <!-- Left Column -->
+          <div class="audience-left reveal">
+            <span class="section-label audience-badge">BUILT FOR EVERYONE</span>
+            <h2 class="audience-heading">Made for patients, caregivers, and everyday people.</h2>
           </div>
 
-          <!-- Carousel Dots indicator -->
-          <div class="carousel-indicators" id="carouselIndicators">
-            <span class="carousel-dot active" data-index="0"></span>
-            <span class="carousel-dot" data-index="1"></span>
-            <span class="carousel-dot" data-index="2"></span>
-            <span class="carousel-dot" data-index="3"></span>
+          <!-- Right Column -->
+          <div class="audience-right reveal delay-100">
+            <div class="audience-grid-new">
+              
+              <!-- Card 1 -->
+              <div class="audience-card-new">
+                <div class="audience-card-photo">
+                  <img src="assets/audience_patients.png" alt="Patients" class="audience-photo-img">
+                </div>
+                <div class="audience-card-content">
+                  <h4 class="audience-card-title">Patients</h4>
+                  <p class="audience-card-desc">Understand your prescriptions and take your medications with confidence.</p>
+                </div>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="audience-card-new">
+                <div class="audience-card-photo">
+                  <img src="assets/audience_caregivers.png" alt="Caregivers" class="audience-photo-img">
+                </div>
+                <div class="audience-card-content">
+                  <h4 class="audience-card-title">Caregivers</h4>
+                  <p class="audience-card-desc">Support your loved ones by having the right information at your fingertips.</p>
+                </div>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="audience-card-new">
+                <div class="audience-card-photo">
+                  <img src="assets/audience_everyone.png" alt="Everyone" class="audience-photo-img">
+                </div>
+                <div class="audience-card-content">
+                  <h4 class="audience-card-title">Everyone</h4>
+                  <p class="audience-card-desc">Because health information should be simple for everyone.</p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
-
       </div>
     </section>
 

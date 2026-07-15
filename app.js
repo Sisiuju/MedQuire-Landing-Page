@@ -264,42 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
     statsObserver.observe(statsSection);
   }
 
-  // =========================================================================
-  // 4. WHO IT'S FOR - HORIZONTAL CAROUSEL SYNC
-  // =========================================================================
-  const carousel = document.getElementById('audienceCarousel');
-  const dots = document.querySelectorAll('.carousel-dot');
 
-  if (carousel && dots.length > 0) {
-    const updateDots = () => {
-      const cardWidth = carousel.querySelector('.audience-card').offsetWidth + 28; // card width + gap
-      const scrollPosition = carousel.scrollLeft;
-      const activeIndex = Math.round(scrollPosition / cardWidth);
-      
-      dots.forEach((dot, index) => {
-        if (index === activeIndex) {
-          dot.classList.add('active');
-        } else {
-          dot.classList.remove('active');
-        }
-      });
-    };
-
-    // Scroll to item when clicking dot
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => {
-        const cardWidth = carousel.querySelector('.audience-card').offsetWidth + 28;
-        carousel.scrollTo({
-          left: index * cardWidth,
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Update dots on scroll
-    carousel.addEventListener('scroll', updateDots);
-    window.addEventListener('resize', updateDots);
-  }
 
   // =========================================================================
   // 5. CHAT / DEMO SIMULATION (METFORMIN SEARCH)
