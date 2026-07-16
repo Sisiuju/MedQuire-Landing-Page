@@ -3091,9 +3091,15 @@ footer {
 }
 
 @media (max-width: 768px) {
-  /* Hide entirely on mobile to keep stacked content fully readable */
+  /* Position ribbon behind the cards on mobile, properly contained to avoid overflow */
   .hero-holographic-ribbon-container {
-    display: none !important;
+    display: block !important;
+    width: 100%;
+    height: 50%;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
 }
 
