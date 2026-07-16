@@ -84,6 +84,8 @@ html {
 }
 
 body {
+  position: relative;
+  width: 100%;
   overflow-x: hidden;
   max-width: 100%;
   line-height: 1.6;
@@ -379,9 +381,9 @@ footer {
 header {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 100%;
+  transform: none;
   height: 80px; /* Base header height */
   z-index: 1000;
   background-color: var(--bg-primary);
@@ -403,6 +405,10 @@ header {
 
 /* Floating Sticky Navigation state (Compact capsule toolbar trigger past hero) */
 header.sticky-floating {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: none !important;
   top: 18px;
   width: calc(100% - 32px); /* Mobile margin spacing */
   max-width: 1200px;
@@ -655,6 +661,10 @@ header.sticky-floating .logo-img {
 
 body.menu-open {
   overflow: hidden;
+}
+
+body.menu-open header {
+  z-index: 1005; /* Lift header above the backdrop overlay (1001) so menu items are clickable */
 }
 
 /* 1. Hero Section Layout (Mobile First) */
@@ -1043,8 +1053,9 @@ body.menu-open {
 /* Mobile Overrides (Simplify to single capsule reveal) */
 @media (max-width: 768px) {
   .hero-visual-placeholder {
-    height: 180px;
+    height: 240px; /* Give enough room for search mockup and capsule to display */
     margin-top: 1.5rem;
+    overflow: hidden;
   }
   
   .conversational-ripple-wrapper {
@@ -1060,13 +1071,6 @@ body.menu-open {
 
   .capsule-stack {
     gap: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Completely hide below 480px to protect mobile readability */
-  .hero-visual-placeholder {
-    display: none !important;
   }
 }
 
@@ -3100,6 +3104,10 @@ footer {
     bottom: 0;
     right: 0;
     left: 0;
+    animation: none !important;
+  }
+  .hero-holographic-ribbon {
+    animation: none !important;
   }
 }
 
