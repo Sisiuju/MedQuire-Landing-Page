@@ -27,7 +27,7 @@
 
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="design-tokens.css">
-  <link rel="stylesheet" href="index.css?v=3.8">
+  <link rel="stylesheet" href="index.css?v=4.1">
 </head>
 <body>
 
@@ -526,6 +526,235 @@
               <button type="submit" class="waitlist-btn">Get Early Access</button>
             </form>
           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 8.5. FAQ SECTION -->
+    <section class="faq-section section-padding" id="faq">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <span class="section-label faq-badge">FAQ</span>
+          <h2 class="faq-heading">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-accordion reveal delay-100">
+          
+          <!-- Item 1 (What is MedQuire?) -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">What is MedQuire?</span>
+              <span class="faq-icon-wrapper">
+                <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-content">
+                <p>MedQuire is an AI-powered medication companion that translates complex drug information into clear, everyday language. It helps you understand what a medicine is for, how to take it, possible side effects, interactions, and important warnings.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 (How does MedQuire work?) -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">How does MedQuire work?</span>
+              <span class="faq-icon-wrapper">
+                <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-content">
+                <p>Simply search for a medication by name. MedQuire analyses trusted medical information and presents it in a clear, easy-to-understand format.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 (Does MedQuire replace my doctor or pharmacist?) -->
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span class="faq-question">Does MedQuire replace my doctor or pharmacist?</span>
+              <span class="faq-icon-wrapper">
+                <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                  <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                  <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                </svg>
+              </span>
+            </button>
+            <div class="faq-panel">
+              <div class="faq-content">
+                <p>No. MedQuire is designed to help you better understand your medication, but it does not replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare professional for medical decisions.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden Remaining Questions wrapper (8 items) -->
+          <div id="faqMoreWrapper" style="display: none; flex-direction: column; gap: 0.75rem; width: 100%;">
+            
+            <!-- Item 4 (Who is MedQuire for?) -->
+            <div class="faq-item faq-item-more">
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">Who is MedQuire for?</span>
+                <span class="faq-icon-wrapper">
+                  <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-content">
+                  <p>MedQuire is designed for patients, caregivers, parents, older adults, and anyone who wants to better understand their medications without struggling through medical jargon.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 (What is ELI12 mode?) -->
+            <div class="faq-item faq-item-more">
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">What is ELI12 mode?</span>
+                <span class="faq-icon-wrapper">
+                  <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-content">
+                  <p>ELI12 mode rewrites complex medical terminology into simple language that's easy for almost anyone to understand, making medication information less overwhelming.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 6 (Where does MedQuire get its information?) -->
+            <div class="faq-item faq-item-more">
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">Where does MedQuire get its information?</span>
+                <span class="faq-icon-wrapper">
+                  <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-content">
+                  <p>MedQuire uses trusted medical sources, including OpenFDA and other reputable clinical references, to provide accurate and up-to-date medication information.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 7 (Can I check drug interactions?) -->
+            <div class="faq-item faq-item-more">
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">Can I check drug interactions?</span>
+                <span class="faq-icon-wrapper">
+                  <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-content">
+                  <p>Yes. MedQuire helps you identify potential interactions between medications and highlights important safety information to discuss with your healthcare professional.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 8 (Is MedQuire available on iPhone and Android?) -->
+            <div class="faq-item faq-item-more">
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">Is MedQuire available on iPhone and Android?</span>
+                <span class="faq-icon-wrapper">
+                  <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-content">
+                  <p>MedQuire is being built for both iOS and Android. We're currently in pre-launch — join the waitlist to be notified as soon as we go live.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 9 (Can I save medications for later?) -->
+            <div class="faq-item faq-item-more">
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">Can I save medications for later?</span>
+                <span class="faq-icon-wrapper">
+                  <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-content">
+                  <p>Yes. You can save medications to your personal Cabinet, making it easy to revisit information whenever you need it.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 10 (Is my information private?) -->
+            <div class="faq-item faq-item-more">
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">Is my information private?</span>
+                <span class="faq-icon-wrapper">
+                  <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-content">
+                  <p>Yes. Protecting your privacy is a priority. MedQuire is designed to handle your information securely and responsibly.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 11 (Can I use MedQuire without medical knowledge?) -->
+            <div class="faq-item faq-item-more">
+              <button class="faq-trigger" aria-expanded="false">
+                <span class="faq-question">Can I use MedQuire without medical knowledge?</span>
+                <span class="faq-icon-wrapper">
+                  <svg class="faq-icon-plus" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <line x1="12" y1="5" x2="12" y2="19" class="faq-line-v"></line>
+                    <line x1="5" y1="12" x2="19" y2="12" class="faq-line-h"></line>
+                  </svg>
+                </span>
+              </button>
+              <div class="faq-panel">
+                <div class="faq-content">
+                  <p>Absolutely. MedQuire was built specifically for everyday people. You don't need any medical background to understand the explanations.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Show More Toggle Button -->
+          <div class="faq-toggle-container">
+            <button id="faqToggleBtn" class="faq-toggle-btn">
+              <span class="faq-btn-text">Show more questions</span>
+              <svg class="faq-toggle-chevron" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </div>
+
         </div>
 
       </div>

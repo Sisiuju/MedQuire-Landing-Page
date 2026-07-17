@@ -729,5 +729,99 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // =========================================================================
+  // FAQ Accordion Manager & Show More Toggle
+  // =========================================================================
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const trigger = item.querySelector('.faq-trigger');
+    const panel = item.querySelector('.faq-panel');
+    
+    if (trigger && panel) {
+      trigger.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Collapse all other items first
+        faqItems.forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+            const otherTrigger = otherItem.querySelector('.faq-trigger');
+            const otherPanel = otherItem.querySelector('.faq-panel');
+            if (otherPanel) otherPanel.style.maxHeight = '0px';
+            if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+        
+        // Toggle current item
+        if (isActive) {
+          item.classList.remove('active');
+          panel.style.maxHeight = '0px';
+          trigger.setAttribute('aria-expanded', 'false');
+        } else {
+          item.classList.add('active');
+          panel.style.maxHeight = panel.scrollHeight + 'px';
+          trigger.setAttribute('aria-expanded', 'true');
+        }
+      });
+    }
+  });
+
+  const faqToggleBtn = document.getElementById('faqToggleBtn');
+  const faqMoreWrapper = document.getElementById('faqMoreWrapper');
+  
+  if (faqToggleBtn && faqMoreWrapper) {
+    const moreItems = faqMoreWrapper.querySelectorAll('.faq-item-more');
+    
+    faqToggleBtn.addEventListener('click', () => {
+      const isExpanded = faqToggleBtn.classList.contains('active');
+      
+      if (!isExpanded) {
+        // Expand action:
+        faqToggleBtn.classList.add('active');
+        faqMoreWrapper.style.display = 'flex';
+        
+        // Staggered animation reveal
+        moreItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('reveal-show');
+          }, index * 80); // Staggered by 80ms
+        });
+        
+        // Update button text
+        const btnText = faqToggleBtn.querySelector('.faq-btn-text');
+        if (btnText) btnText.textContent = 'Show less questions';
+      } else {
+        // Collapse action:
+        faqToggleBtn.classList.remove('active');
+        
+        // Scroll smoothly to top of FAQ section first
+        const faqSection = document.getElementById('faq');
+        if (faqSection) {
+          faqSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        // Wait for scroll/transition then collapse
+        moreItems.forEach(item => {
+          item.classList.remove('reveal-show');
+        });
+        
+        setTimeout(() => {
+          faqMoreWrapper.style.display = 'none';
+          // Collapse all panels inside the wrapper to reset state
+          moreItems.forEach(item => {
+            item.classList.remove('active');
+            const panel = item.querySelector('.faq-panel');
+            const trigger = item.querySelector('.faq-trigger');
+            if (panel) panel.style.maxHeight = '0px';
+            if (trigger) trigger.setAttribute('aria-expanded', 'false');
+          });
+        }, 300);
+        
+        const btnText = faqToggleBtn.querySelector('.faq-btn-text');
+        if (btnText) btnText.textContent = 'Show more questions';
+      }
+    });
+  }
+
 });
 
