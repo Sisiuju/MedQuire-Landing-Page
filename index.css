@@ -2791,13 +2791,20 @@ footer {
   background: linear-gradient(180deg, var(--bg-primary) 0%, #FFFFFF 100%);
   position: relative;
   overflow: hidden;
+  padding: 3rem 0; /* Reduced from 4.5rem to integrate with the layout flow */
+}
+
+@media (min-width: 992px) {
+  .waitlist-section {
+    padding: 4.5rem 0; /* Reduced from 7.0rem (35% reduction) */
+  }
 }
 
 .waitlist-card {
   position: relative;
-  max-width: 720px;
+  max-width: 600px; /* Reduced from 720px for strategic width integration */
   margin: 0 auto;
-  padding: 3rem 2.5rem;
+  padding: 2.25rem 2rem; /* Reduced from 3rem 2.5rem to tighten layout density */
   border-radius: 24px;
   border: 1px solid rgba(64, 119, 241, 0.12);
   text-align: center;
@@ -2833,7 +2840,7 @@ footer {
   color: var(--text-secondary);
   line-height: 1.5;
   max-width: 520px;
-  margin: 0 auto 2.25rem auto;
+  margin: 0 auto 1.5rem auto; /* Reduced from 2.25rem to pull content together */
 }
 
 .waitlist-form {
@@ -2901,7 +2908,7 @@ footer {
 
 @media (max-width: 576px) {
   .waitlist-card {
-    padding: 2.25rem 1.5rem;
+    padding: 1.75rem 1.25rem; /* Reduced from 2.25rem 1.5rem */
   }
   .waitlist-title {
     font-size: 1.65rem;
