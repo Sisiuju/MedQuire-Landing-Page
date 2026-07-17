@@ -218,6 +218,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const typingInput = document.getElementById('typingInput');
   let demoTimer = null;
 
+  if (chatArea && typingInput) {
+
   // Render a chat bubble in the simulation
   const appendBubble = (type, content) => {
     const bubble = document.createElement('div');
@@ -390,18 +392,78 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 200);
   };
 
-  // Launch simulated demo loop
-  startDemoSimulation();
-
-  window.addEventListener('blur', () => {
-    if (demoTimer) clearTimeout(demoTimer);
-  });
-  window.addEventListener('focus', () => {
-    if (demoTimer) {
-      clearTimeout(demoTimer);
-    }
+    // Launch simulated demo loop
     startDemoSimulation();
-  });
+
+    window.addEventListener('blur', () => {
+      if (demoTimer) clearTimeout(demoTimer);
+    });
+    window.addEventListener('focus', () => {
+      if (demoTimer) {
+        clearTimeout(demoTimer);
+      }
+      startDemoSimulation();
+    });
+  }
+
+  // =========================================================================
+  // 5B. VIDEO DEMO SECTION CONTROLLER
+  // =========================================================================
+  const demoVideo = document.getElementById('demoVideo');
+  const playPauseBtn = document.getElementById('playPauseBtn');
+  const muteBtn = document.getElementById('muteBtn');
+
+  if (demoVideo) {
+    // Reduce video playback rate to 0.75 for improved readability
+    demoVideo.playbackRate = 0.75;
+    demoVideo.addEventListener('loadedmetadata', () => {
+      demoVideo.playbackRate = 0.75;
+    });
+
+    // 1. Intersection Observer for Playback Control (Pause when off-screen)
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // Play the video when in view (if not paused manually)
+          if (!demoVideo.dataset.pausedManually) {
+            demoVideo.play().catch(e => console.log('Autoplay blocked:', e));
+          }
+        } else {
+          // Pause when scrolled out of view
+          demoVideo.pause();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    videoObserver.observe(demoVideo);
+
+    // 2. Play/Pause toggle
+    if (playPauseBtn) {
+      playPauseBtn.addEventListener('click', () => {
+        if (demoVideo.paused) {
+          demoVideo.play();
+          delete demoVideo.dataset.pausedManually;
+          playPauseBtn.classList.remove('paused');
+        } else {
+          demoVideo.pause();
+          demoVideo.dataset.pausedManually = 'true';
+          playPauseBtn.classList.add('paused');
+        }
+      });
+    }
+
+    // 3. Mute/Unmute toggle
+    if (muteBtn) {
+      muteBtn.addEventListener('click', () => {
+        demoVideo.muted = !demoVideo.muted;
+        if (demoVideo.muted) {
+          muteBtn.classList.add('muted');
+        } else {
+          muteBtn.classList.remove('muted');
+        }
+      });
+    }
+  }
 
   // --- FLAGSHIP HERO SVG PARALLAX CONTROLLER ---
   const heroVisual = document.getElementById('heroVisual');

@@ -27,7 +27,7 @@
 
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="design-tokens.css">
-  <link rel="stylesheet" href="index.css?v=2.7">
+  <link rel="stylesheet" href="index.css?v=3.3">
 </head>
 <body>
 
@@ -609,11 +609,25 @@
     <!-- 5. TRUST & SAFETY STRIP -->
     <section class="trust-strip">
       <div class="container trust-content">
-        <div class="trust-message">
-          <svg viewBox="0 0 24 24">
-            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
-          </svg>
-          <span><strong>Medical Disclaimer:</strong> MedQuire simplifies medical information to support general understanding. It does not replace professional medical advice, diagnosis, or treatment. Always consult your doctor.</span>
+        <div class="trust-ticker-container">
+          <div class="trust-ticker-track">
+            <div class="trust-ticker-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              <span><strong class="disclaimer-highlight">Medical Disclaimer:</strong> MedQuire simplifies medical information to support general understanding. It does not replace professional medical advice, diagnosis, or treatment. Always consult your doctor.</span>
+            </div>
+            <div class="trust-ticker-item" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                <line x1="12" y1="9" x2="12" y2="13"></line>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+              </svg>
+              <span><strong class="disclaimer-highlight">Medical Disclaimer:</strong> MedQuire simplifies medical information to support general understanding. It does not replace professional medical advice, diagnosis, or treatment. Always consult your doctor.</span>
+            </div>
+          </div>
         </div>
         <div class="fda-badge">
           <span class="fda-badge-icon"></span>
@@ -627,58 +641,66 @@
       <div class="container demo-container">
         
         <div class="demo-info reveal">
-          <span class="section-label">Interactive Experience</span>
-          <h2>See MedQuire translate labels in real time</h2>
-          <p class="section-desc" style="margin-bottom: 2rem;">
-            Watch how our AI conversational helper answers questions about common drugs. Try watching the simulator type a query and formulate a structured result card.
+          <span class="section-label features-badge">Interactive Experience</span>
+          <h2 class="features-heading" style="margin-bottom: 1.25rem;">See MedQuire translate labels in real time</h2>
+          <p class="features-subtext">
+            Watch a real walkthrough of MedQuire answering questions about common drugs.
           </p>
           
-          <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-teal-soft); border: 1px solid var(--accent-teal); color: var(--accent-teal); font-weight: bold; font-size: 0.8rem; flex-shrink: 0; margin-top: 0.2rem;">✓</span>
-              <div>
-                <h4 style="margin-bottom: 0.25rem;">OpenFDA Drug Lookup</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Searches government clinical repositories dynamically for up-to-date facts.</p>
+          <div class="demo-features-list">
+            <!-- Card 1: OpenFDA Drug Lookup -->
+            <div class="demo-feature-card">
+              <div class="demo-feature-icon icon-blue">
+                <svg viewBox="0 0 24 24">
+                  <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                  <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                </svg>
+              </div>
+              <div class="demo-feature-content">
+                <h4 class="demo-feature-title">OpenFDA Drug Lookup</h4>
+                <p class="demo-feature-desc">Searches government clinical repositories dynamically for up-to-date facts.</p>
               </div>
             </div>
-            <div style="display: flex; gap: 1rem; align-items: flex-start;">
-              <span style="display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--accent-teal-soft); border: 1px solid var(--accent-teal); color: var(--accent-teal); font-weight: bold; font-size: 0.8rem; flex-shrink: 0; margin-top: 0.2rem;">✓</span>
-              <div>
-                <h4 style="margin-bottom: 0.25rem;">Natural Language Answers</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Talk to it like a pharmacist friend. Ask follow-up questions easily.</p>
+
+            <!-- Card 2: Natural Language Answers -->
+            <div class="demo-feature-card">
+              <div class="demo-feature-icon icon-teal">
+                <svg viewBox="0 0 24 24">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </div>
+              <div class="demo-feature-content">
+                <h4 class="demo-feature-title">Natural Language Answers</h4>
+                <p class="demo-feature-desc">Talk to it like a pharmacist friend. Ask follow-up questions easily.</p>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Phone screen typing simulator -->
+        <!-- Phone screen video demo -->
         <div class="demo-interface-wrapper reveal delay-200">
           <div class="demo-phone">
-            <div class="demo-phone-screen" id="demoScreen">
+            <!-- Video tag placed inside screen with overflow hidden -->
+            <div class="demo-video-container">
+              <video id="demoVideo" loop muted playsinline autoplay poster="Frame 9.png">
+                <source src="assets/IMG_0632.MOV" type="video/quicktime">
+                <source src="assets/IMG_0632.MOV" type="video/mp4">
+              </video>
               
-              <div class="demo-app-bar">
-                <div class="demo-app-avatar">MQ</div>
-                <div>
-                  <div class="demo-app-name">MedQuire Assistant</div>
-                  <div class="demo-app-status">
-                    <span class="demo-status-pulse"></span>AI Connected
-                  </div>
-                </div>
+              <!-- Video controls overlay -->
+              <div class="video-controls-overlay" style="position: absolute; bottom: 12px; right: 12px; display: flex; gap: 8px; z-index: 15;">
+                <button id="playPauseBtn" class="video-control-btn" aria-label="Play/Pause Video">
+                  <!-- Play / Pause Icon -->
+                  <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                  <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                </button>
+                <button id="muteBtn" class="video-control-btn muted" aria-label="Mute/Unmute Video">
+                  <!-- Mute / Unmute Icon -->
+                  <svg class="icon-unmute" viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  <svg class="icon-mute" viewBox="0 0 24 24"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.21.05-.42.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                </button>
               </div>
-
-              <div class="demo-chat-area" id="chatArea">
-                <!-- Dialogue will load here via app.js -->
-              </div>
-
-              <div class="demo-typing-box">
-                <div class="demo-typing-input typing-active" id="typingInput">Search for a medication...</div>
-                <div class="demo-send-btn">
-                  <svg style="width: 18px; height: 18px; fill: currentColor;" viewBox="0 0 24 24">
-                    <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
-                  </svg>
-                </div>
-              </div>
-
             </div>
           </div>
           <div class="demo-phone-glow"></div>
