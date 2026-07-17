@@ -1284,20 +1284,75 @@ body.menu-open header {
 /* Glowing Light-Streak Wave Background (Inverted & Multiplied for Light Theme) */
 
 
-/* Steps Grid layout on Mobile by default */
-.steps-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: stretch;
-  gap: 2.5rem;
-  position: relative;
-  z-index: 10;
-  margin-top: 3.5rem;
+/* How It Works Split Layout */
+.steps-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
-/* Hide connectors on mobile */
-.step-connector-arrow {
-  display: none;
+.steps-left {
+  width: 100%;
+}
+
+.steps-badge {
+  margin-bottom: 1rem;
+  display: inline-flex;
+}
+
+.steps-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0B348E;
+  margin: 0 0 1rem 0;
+  line-height: 1.25;
+}
+
+.steps-subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #485F85;
+  margin: 0;
+  line-height: 1.5;
+  max-width: 480px;
+}
+
+.steps-right {
+  width: 100%;
+}
+
+.steps-grid-new {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+/* Tablet Media Query (min-width: 768px) */
+@media (min-width: 768px) {
+  .steps-grid-new {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+/* Desktop Media Query (min-width: 992px) */
+@media (min-width: 992px) {
+  .steps-layout {
+    flex-direction: row;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .steps-left {
+    width: 28%;
+    flex-shrink: 0;
+  }
+
+  .steps-right {
+    width: 72%;
+    flex-grow: 1;
+  }
 }
 
 .step-card {
@@ -1357,6 +1412,38 @@ body.menu-open header {
   color: #485F85;
   margin: 0;
   line-height: 1.5;
+}
+
+/* Redesigned step card size optimizations for the split layout */
+.steps-grid-new .step-card {
+  padding: 1.5rem 1.25rem;
+  border-radius: 16px;
+}
+
+.steps-grid-new .step-card-num {
+  top: 1rem;
+  left: 1.25rem;
+  font-size: 1.15rem;
+}
+
+.steps-grid-new .step-card-illustration {
+  margin: 0.5rem 0 1rem 0;
+  height: 90px;
+}
+
+.steps-grid-new .step-card-illustration svg {
+  max-height: 100%;
+  width: auto;
+}
+
+.steps-grid-new .step-card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.steps-grid-new .step-card-desc {
+  font-size: 0.85rem;
+  line-height: 1.45;
 }
 
 /* 3. Feature Highlights Section */
@@ -2555,18 +2642,7 @@ footer {
     padding: 0.5rem 1.25rem !important;
   }
   
-  /* How It Works Grid */
-  .steps-grid {
-    grid-template-columns: 1fr auto 1fr auto 1fr;
-    align-items: stretch; /* equal heights for cards */
-    gap: 0.5rem;
-  }
-  
-  .step-connector-arrow {
-    display: flex;
-    align-self: flex-start;
-    margin-top: calc(3.75rem + 42px); /* aligned to center of 120px illustration */
-  }
+
   
   /* Features Grid */
   .features-grid-new {
@@ -2829,7 +2905,7 @@ footer {
     padding: 0 1.5rem;
   }
   
-  .steps-grid {
+  .steps-grid-new {
     gap: 2rem;
   }
   
@@ -3439,4 +3515,116 @@ footer {
   .light-streaks-img {
     animation: none !important;
   }
+}
+
+/* Premium Success Modal styling */
+.waitlist-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(11, 52, 142, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.waitlist-modal-backdrop.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.waitlist-modal-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 20px 50px rgba(11, 52, 142, 0.15);
+  border-radius: 24px;
+  width: 90%;
+  max-width: 440px;
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: scale(0.9) translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+  opacity: 0;
+}
+
+.waitlist-modal-backdrop.active .waitlist-modal-card {
+  transform: scale(1) translateY(0);
+  opacity: 1;
+}
+
+.waitlist-modal-check {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  border: 2px solid rgba(16, 185, 129, 0.2);
+}
+
+.waitlist-modal-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.65rem;
+  font-weight: 700;
+  color: #0B348E;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.25;
+}
+
+.waitlist-modal-message {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #485F85;
+  margin: 0 0 1.75rem 0;
+  line-height: 1.5;
+}
+
+.waitlist-modal-btn {
+  background: #1256ED;
+  color: #FFFFFF;
+  padding: 0.8rem 2.5rem;
+  border-radius: 12px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(18, 86, 237, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.waitlist-modal-btn:hover {
+  background: #0B348E;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(11, 52, 142, 0.25);
+}
+
+.waitlist-modal-btn:active {
+  transform: translateY(0);
+}
+
+/* User-friendly error message styling under the form */
+.waitlist-error-message {
+  color: #DC2626;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  text-align: left;
+  width: 100%;
+  animation: fadeIn 0.3s ease;
 }

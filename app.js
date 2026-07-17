@@ -607,5 +607,127 @@ document.addEventListener('DOMContentLoaded', () => {
 
   initConversationalRipple();
 
+  // =========================================================================
+  // Google Form Waitlist Integration
+  // =========================================================================
+  const waitlistForm = document.querySelector('.waitlist-form');
+  if (waitlistForm) {
+    let errorMsgEl = null;
+
+    const showError = (message) => {
+      if (!errorMsgEl) {
+        errorMsgEl = document.createElement('div');
+        errorMsgEl.className = 'waitlist-error-message';
+        waitlistForm.parentNode.appendChild(errorMsgEl);
+      }
+      errorMsgEl.textContent = message;
+      errorMsgEl.style.display = 'block';
+    };
+
+    const clearError = () => {
+      if (errorMsgEl) {
+        errorMsgEl.textContent = '';
+        errorMsgEl.style.display = 'none';
+      }
+    };
+
+    // Modal creation helper
+    const showSuccessModal = () => {
+      let backdrop = document.getElementById('waitlistSuccessModal');
+      if (!backdrop) {
+        backdrop = document.createElement('div');
+        backdrop.id = 'waitlistSuccessModal';
+        backdrop.className = 'waitlist-modal-backdrop';
+        backdrop.innerHTML = `
+          <div class="waitlist-modal-card">
+            <div class="waitlist-modal-check">✓</div>
+            <h3 class="waitlist-modal-title">You're on the list!</h3>
+            <p class="waitlist-modal-message">Thanks for joining the MedQuire waitlist. We'll let you know as soon as early access is available.</p>
+            <button class="waitlist-modal-btn">Dismiss</button>
+          </div>
+        `;
+        document.body.appendChild(backdrop);
+
+        // Dismiss actions
+        const closeBtn = backdrop.querySelector('.waitlist-modal-btn');
+        closeBtn.addEventListener('click', () => {
+          backdrop.classList.remove('active');
+        });
+        
+        backdrop.addEventListener('click', (e) => {
+          if (e.target === backdrop) {
+            backdrop.classList.remove('active');
+          }
+        });
+      }
+      
+      // Trigger animation
+      setTimeout(() => {
+        backdrop.classList.add('active');
+      }, 10);
+    };
+
+    waitlistForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      clearError();
+      
+      const emailInput = waitlistForm.querySelector('.waitlist-input');
+      const submitBtn = waitlistForm.querySelector('.waitlist-btn');
+      if (!emailInput || !submitBtn) return;
+      
+      const emailVal = emailInput.value.trim();
+      if (!emailVal) {
+        showError("Please enter your email address.");
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(emailVal)) {
+        showError("Please enter a valid email address.");
+        return;
+      }
+      
+      // Update UI to submitting state
+      submitBtn.disabled = true;
+      emailInput.disabled = true;
+      const originalBtnText = submitBtn.textContent;
+      submitBtn.textContent = 'Joining...';
+      
+      // Form parameters
+      const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSe1GCuT8fXF_7VpcFboeVoQ8zmNq6ojWRX5_kmJFqoVcwT7BQ/formResponse';
+      const params = new URLSearchParams();
+      params.append('entry.1538647705', emailVal);
+      
+      fetch(formUrl, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: params.toString()
+      })
+      .then(() => {
+        // Show success modal
+        showSuccessModal();
+        emailInput.value = ''; // Clear form input
+        
+        // Reset inputs and buttons
+        submitBtn.disabled = false;
+        emailInput.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      })
+      .catch((error) => {
+        console.error('Waitlist submission failed:', error);
+        showError("Something went wrong. Please check your network and try again.");
+        
+        // Reset inputs and buttons
+        submitBtn.disabled = false;
+        emailInput.disabled = false;
+        submitBtn.textContent = originalBtnText;
+      });
+    });
+  }
+
 });
 

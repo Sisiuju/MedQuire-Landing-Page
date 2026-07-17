@@ -27,7 +27,7 @@
 
   <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="design-tokens.css">
-  <link rel="stylesheet" href="index.css?v=3.3">
+  <link rel="stylesheet" href="index.css?v=3.8">
 </head>
 <body>
 
@@ -208,252 +208,51 @@
 
 
       <div class="container">
-        
-        <div class="section-header reveal">
-          <span class="section-label">SIMPLICITY IN ACTION</span>
-          <h2>How MedQuire Works</h2>
-          <p class="section-desc">Get clear answers in three simple steps. MedQuire translates complex medication information into language anyone can understand.</p>
-        </div>
+        <div class="steps-layout">
+          <!-- Left Column -->
+          <div class="steps-left reveal">
+            <span class="section-label steps-badge">SIMPLICITY IN ACTION</span>
+            <h2 class="steps-heading">How MedQuire Works</h2>
+            <p class="steps-subtext">Get clear answers in three simple steps. MedQuire translates complex medication information into language anyone can understand.</p>
+          </div>
 
-        <div class="steps-grid reveal delay-100">
+          <!-- Right Column -->
+          <div class="steps-right reveal delay-100">
+            <div class="steps-grid-new">
           
           <!-- Step 1 Card -->
           <div class="step-card">
             <span class="step-card-num">01</span>
             <div class="step-card-illustration">
-              <svg viewBox="0 0 160 120" width="100%" height="120" style="overflow: visible;">
-                <defs>
-                  <!-- Phone gradients -->
-                  <linearGradient id="phoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="100%" stop-color="#E2E8F0" />
-                  </linearGradient>
-                  <linearGradient id="screenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#F8FAFC" />
-                    <stop offset="100%" stop-color="#E7EEFD" />
-                  </linearGradient>
-                  <!-- Bottle gradients -->
-                  <linearGradient id="capGradNew" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#719AF4" />
-                    <stop offset="50%" stop-color="#1256ED" />
-                    <stop offset="100%" stop-color="#0B348E" />
-                  </linearGradient>
-                  <linearGradient id="bodyGradNew" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="60%" stop-color="#E7EEFD" />
-                    <stop offset="100%" stop-color="#C7DAFC" />
-                  </linearGradient>
-                  <linearGradient id="labelGradNew" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="100%" stop-color="#ECEFF1" />
-                  </linearGradient>
-                  <!-- Pill gradients -->
-                  <linearGradient id="pillBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#719AF4" />
-                    <stop offset="100%" stop-color="#1256ED" />
-                  </linearGradient>
-                  <linearGradient id="pillWhite" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="100%" stop-color="#E2E8F0" />
-                  </linearGradient>
-                </defs>
-                
-                <g transform="translate(0, 5)">
-                  <!-- Phone Mockup -->
-                  <rect x="25" y="10" width="55" height="95" rx="8" fill="url(#phoneGrad)" stroke="#CBD5E1" stroke-width="1.2" filter="drop-shadow(0 4px 10px rgba(11,52,142,0.06))" />
-                  <rect x="29" y="14" width="47" height="87" rx="5" fill="url(#screenGrad)" />
-                  <rect x="47" y="17" width="11" height="2" rx="1" fill="#CBD5E1" />
-                  
-                  <!-- Phone search mockup -->
-                  <rect x="33" y="32" width="39" height="10" rx="3" fill="#FFFFFF" stroke="#1256ED" stroke-width="0.8" />
-                  <circle cx="37" cy="37" r="1.5" fill="none" stroke="#1256ED" stroke-width="0.6" />
-                  <line x1="38.2" y1="38.2" x2="39.5" y2="39.5" stroke="#1256ED" stroke-width="0.6" stroke-linecap="round" />
-                  <text x="41" y="38.5" font-family="Inter, sans-serif" font-weight="600" font-size="3.5" fill="#0B348E">Lisinopril</text>
-                  <!-- Cursor -->
-                  <line x1="56.5" y1="34.5" x2="56.5" y2="39.5" stroke="#1256ED" stroke-width="0.5" opacity="0.8">
-                    <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
-                  </line>
-                  
-                  <!-- Screen content -->
-                  <rect x="33" y="47" width="39" height="24" rx="2" fill="#FFFFFF" opacity="0.7" />
-                  <circle cx="39" cy="53" r="3" fill="#A0BCF8" opacity="0.5" />
-                  <line x1="45" y1="51" x2="67" y2="51" stroke="#2B3950" stroke-width="1" opacity="0.2" />
-                  <line x1="45" y1="55" x2="61" y2="55" stroke="#2B3950" stroke-width="1" opacity="0.2" />
-                  <line x1="37" y1="62" x2="67" y2="62" stroke="#2B3950" stroke-width="0.8" opacity="0.15" />
-                  <line x1="37" y1="65" x2="55" y2="65" stroke="#2B3950" stroke-width="0.8" opacity="0.15" />
-                  
-                  <!-- Pill Bottle -->
-                  <g transform="translate(100, 48) rotate(-10)">
-                    <rect x="-14" y="-22" width="28" height="7" rx="1.5" fill="url(#capGradNew)" filter="drop-shadow(0 2px 4px rgba(11,52,142,0.15))" />
-                    <line x1="-12" y1="-21" x2="-12" y2="-16" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" />
-                    <line x1="-8" y1="-21" x2="-8" y2="-16" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" />
-                    <line x1="-4" y1="-21" x2="-4" y2="-16" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" />
-                    <line x1="0" y1="-21" x2="0" y2="-16" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" />
-                    <line x1="4" y1="-21" x2="4" y2="-16" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" />
-                    <line x1="8" y1="-21" x2="8" y2="-16" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" />
-                    <line x1="12" y1="-21" x2="12" y2="-16" stroke="#FFFFFF" stroke-width="0.5" opacity="0.25" />
-                    
-                    <path d="M-12,-15 L12,-15 L12,32 C12,35 9,37 6,37 L-6,37 C-9,37 -12,35 -12,32 Z" fill="url(#bodyGradNew)" filter="drop-shadow(0 4px 8px rgba(11,52,142,0.12))" />
-                    <path d="M-10,-10 L10,-10 L10,27 C10,29 8,30 6,30 L-6,30 C-8,30 -10,29 -10,27 Z" fill="url(#labelGradNew)" />
-                    <text x="-7" y="1" font-family="Outfit, sans-serif" font-weight="900" font-size="6.5" fill="#1256ED">Rx</text>
-                    <line x1="-7" y1="7" x2="7" y2="7" stroke="#2B3950" stroke-width="0.5" opacity="0.4" />
-                    <line x1="-7" y1="10" x2="4" y2="10" stroke="#2B3950" stroke-width="0.5" opacity="0.4" />
-                    <line x1="-7" y1="13" x2="7" y2="13" stroke="#2B3950" stroke-width="0.5" opacity="0.4" />
-                    
-                    <rect x="-7" y="19" width="1.5" height="5" fill="#2B3950" opacity="0.6" />
-                    <rect x="-4.5" y="19" width="0.8" height="5" fill="#2B3950" opacity="0.6" />
-                    <rect x="-3" y="19" width="1.5" height="5" fill="#2B3950" opacity="0.6" />
-                    <rect x="-0.8" y="19" width="2" height="5" fill="#2B3950" opacity="0.6" />
-                    <rect x="2" y="19" width="0.8" height="5" fill="#2B3950" opacity="0.6" />
-                    <rect x="3.5" y="19" width="1.5" height="5" fill="#2B3950" opacity="0.6" />
-                    <rect x="6" y="19" width="0.8" height="5" fill="#2B3950" opacity="0.6" />
-                  </g>
-                  
-                  <!-- Pills at base -->
-                  <g transform="translate(102, 90) rotate(15)">
-                    <rect x="-6" y="-2.5" width="6" height="5" rx="2.5" fill="url(#pillBlue)" />
-                    <rect x="0" y="-2.5" width="6" height="5" rx="2.5" fill="url(#pillWhite)" />
-                    <rect x="-6" y="-2.5" width="12" height="5" rx="2.5" fill="none" stroke="rgba(11,52,142,0.12)" stroke-width="0.4" />
-                  </g>
-                  <circle cx="82" cy="98" r="3.5" fill="url(#pillWhite)" stroke="rgba(11,52,142,0.12)" stroke-width="0.4" filter="drop-shadow(0 1.5px 2px rgba(11,52,142,0.1))" />
-                  <line x1="80" y1="98" x2="84" y2="98" stroke="#CBD5E1" stroke-width="0.6" />
-                </g>
-              </svg>
+              <img src="assets/Search your medication icon.png" alt="Search Your Medication" style="max-height: 100%; max-width: 100%; width: auto; object-fit: contain;" />
             </div>
             <h3 class="step-card-title">Search Your Medication</h3>
             <p class="step-card-desc">Type your medication name or search by condition to get started.</p>
-          </div>
-
-          <!-- Connector 1->2 -->
-          <div class="step-connector-arrow">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
           </div>
 
           <!-- Step 2 Card -->
           <div class="step-card">
             <span class="step-card-num">02</span>
             <div class="step-card-illustration">
-              <svg viewBox="0 0 160 120" width="100%" height="120" style="overflow: visible;">
-                <defs>
-                  <radialGradient id="orbGrad" cx="30%" cy="30%" r="70%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="35%" stop-color="#719AF4" />
-                    <stop offset="80%" stop-color="#1256ED" />
-                    <stop offset="100%" stop-color="#0B348E" />
-                  </radialGradient>
-                  <radialGradient id="orbGlow" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#1256ED" stop-opacity="0.25" />
-                    <stop offset="100%" stop-color="#1256ED" stop-opacity="0" />
-                  </radialGradient>
-                  <linearGradient id="dotGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="100%" stop-color="#719AF4" />
-                  </linearGradient>
-                </defs>
-                
-                <g transform="translate(0, 5)">
-                  <circle cx="80" cy="55" r="50" fill="url(#orbGlow)" />
-                  <circle cx="80" cy="55" r="32" fill="url(#orbGrad)" filter="drop-shadow(0 5px 15px rgba(18,86,237,0.2))" />
-                  <path d="M57,41 A32,32 0 0,1 103,41 A32,32 0 0,0 57,41" fill="#FFFFFF" opacity="0.22" />
-                  
-                  <g transform="translate(64, 39) scale(1.0)">
-                    <path d="M16,2.5 C11,2.5 8,5.5 8,9.5 C8,11.5 9,13.5 10,14.5 C9.5,15.5 9,16.5 9,18.5 C9,21.5 11,23.5 14,23.5 C15,23.5 15.5,23 16,22.5 C16.5,23 17,23.5 18,23.5 C21,23.5 23,21.5 23,18.5 C23,16.5 22.5,15.5 22,14.5 C23,13.5 24,11.5 24,9.5 C24,5.5 21,2.5 16,2.5 Z" fill="#FFFFFF" opacity="0.95" filter="drop-shadow(0 1.5px 3px rgba(11,52,142,0.2))" />
-                    <path d="M16,3 L16,22" stroke="#1256ED" stroke-width="0.7" stroke-linecap="round" opacity="0.25" />
-                    <path d="M12,7.5 A3,3 0 0,1 15,10.5" fill="none" stroke="#1256ED" stroke-width="0.7" stroke-linecap="round" opacity="0.25" />
-                    <path d="M20,7.5 A3,3 0 0,0 17,10.5" fill="none" stroke="#1256ED" stroke-width="0.7" stroke-linecap="round" opacity="0.25" />
-                    <path d="M11,14.5 A2,2 0 0,0 14,16.5" fill="none" stroke="#1256ED" stroke-width="0.7" stroke-linecap="round" opacity="0.25" />
-                    <path d="M21,14.5 A2,2 0 0,1 18,16.5" fill="none" stroke="#1256ED" stroke-width="0.7" stroke-linecap="round" opacity="0.25" />
-                  </g>
-                  
-                  <circle cx="120" cy="30" r="3" fill="url(#dotGrad)" filter="drop-shadow(0 1.5px 3px rgba(18,86,237,0.12))" />
-                  <circle cx="40" cy="72" r="4" fill="url(#dotGrad)" filter="drop-shadow(0 1.5px 3px rgba(18,86,237,0.12))" />
-                  <circle cx="46" cy="32" r="2" fill="#A0BCF8" opacity="0.8" />
-                  <circle cx="116" cy="76" r="2.5" fill="#A0BCF8" opacity="0.8" />
-                  
-                  <path d="M80,10 L80.8,12.2 L83,13 L80.8,13.8 L80,16 L79.2,13.8 L77,13 L79.2,12.2 Z" fill="#FFFFFF" opacity="0.9" />
-                </g>
-              </svg>
+              <img src="assets/AI Analtyzes.png" alt="AI Analyzes" style="max-height: 100%; max-width: 100%; width: auto; object-fit: contain;" />
             </div>
             <h3 class="step-card-title">AI Analyzes</h3>
             <p class="step-card-desc">Our secure AI reads trusted medical sources and extracts what's important to you.</p>
-          </div>
-
-          <!-- Connector 2->3 -->
-          <div class="step-connector-arrow">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
           </div>
 
           <!-- Step 3 Card -->
           <div class="step-card">
             <span class="step-card-num">03</span>
             <div class="step-card-illustration">
-              <svg viewBox="0 0 160 120" width="100%" height="120" style="overflow: visible;">
-                <defs>
-                  <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFFFFF" />
-                    <stop offset="100%" stop-color="#F8FAFC" />
-                  </linearGradient>
-                  <linearGradient id="rowPurp" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#E9D5FF" />
-                    <stop offset="100%" stop-color="#A855F7" />
-                  </linearGradient>
-                  <linearGradient id="rowBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#C7DAFC" />
-                    <stop offset="100%" stop-color="#1256ED" />
-                  </linearGradient>
-                  <linearGradient id="rowOrange" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#FFEDD5" />
-                    <stop offset="100%" stop-color="#F97316" />
-                  </linearGradient>
-                </defs>
-                
-                <g transform="translate(0, 5)">
-                  <rect x="25" y="10" width="110" height="90" rx="8" fill="url(#cardGrad)" stroke="#E2E8F0" stroke-width="1.2" filter="drop-shadow(0 6px 15px rgba(11,52,142,0.05))" />
-                  <rect x="37" y="20" width="26" height="5" rx="1.5" fill="#1256ED" opacity="0.8" />
-                  <rect x="105" y="20" width="18" height="5" rx="1.5" fill="#10B981" opacity="0.15" />
-                  <circle cx="109" cy="22.5" r="1" fill="#10B981" />
-                  
-                  <!-- Row 1 -->
-                  <g transform="translate(33, 33)">
-                    <rect x="0" y="0" width="94" height="17" rx="4" fill="#FFFFFF" stroke="#F1F5F9" stroke-width="0.8" />
-                    <circle cx="9" cy="8.5" r="5" fill="url(#rowPurp)" />
-                    <path d="M7.7,7.7 C6.9,6.9 6.1,7.9 9,10.4 C11.9,7.9 11.1,6.9 10.3,7.7 C9.7,8.3 9,8.1 9,8.1" fill="none" stroke="#FFFFFF" stroke-width="0.6" stroke-linecap="round" stroke-linejoin="round" />
-                    <rect x="19" y="5.5" width="30" height="2.5" rx="0.8" fill="#A855F7" opacity="0.7" />
-                    <rect x="19" y="10" width="50" height="2" rx="0.6" fill="#CBD5E1" />
-                  </g>
-                  
-                  <!-- Row 2 -->
-                  <g transform="translate(33, 54)">
-                    <rect x="0" y="0" width="94" height="17" rx="4" fill="#FFFFFF" stroke="#F1F5F9" stroke-width="0.8" />
-                    <circle cx="9" cy="8.5" r="5" fill="url(#rowBlue)" />
-                    <rect x="6.5" y="6.5" width="5" height="4" rx="0.3" fill="none" stroke="#FFFFFF" stroke-width="0.6" />
-                    <line x1="8" y1="5.5" x2="8" y2="7" stroke="#FFFFFF" stroke-width="0.5" />
-                    <line x1="10" y1="5.5" x2="10" y2="7" stroke="#FFFFFF" stroke-width="0.5" />
-                    <rect x="19" y="5.5" width="25" height="2.5" rx="0.8" fill="#1256ED" opacity="0.7" />
-                    <rect x="19" y="10" width="44" height="2" rx="0.6" fill="#CBD5E1" />
-                  </g>
-                  
-                  <!-- Row 3 -->
-                  <g transform="translate(33, 75)">
-                    <rect x="0" y="0" width="94" height="17" rx="4" fill="#FFFFFF" stroke="#F1F5F9" stroke-width="0.8" />
-                    <circle cx="9" cy="8.5" r="5" fill="url(#rowOrange)" />
-                    <path d="M9,6.5 L11.5,10.5 L6.5,10.5 Z" fill="none" stroke="#FFFFFF" stroke-width="0.6" stroke-linejoin="round" />
-                    <rect x="19" y="5.5" width="33" height="2.5" rx="0.8" fill="#F97316" opacity="0.7" />
-                    <rect x="19" y="10" width="36" height="2" rx="0.6" fill="#CBD5E1" />
-                  </g>
-                </g>
-              </svg>
+              <img src="assets/Understand clearly.png" alt="Understand Clearly" style="max-height: 100%; max-width: 100%; width: auto; object-fit: contain;" />
             </div>
             <h3 class="step-card-title">Understand Clearly</h3>
             <p class="step-card-desc">Get easy-to-understand explanations about your medication, dosage, interactions, side effects and important warnings.</p>
           </div>
 
+            </div>
+          </div>
         </div>
-
       </div>
     </section>
 
@@ -722,8 +521,8 @@
             <h2 class="waitlist-title">Be the first to know when we launch</h2>
             <p class="waitlist-desc">Join the waitlist and get early access to MedQuire before public release.</p>
             
-            <form class="waitlist-form" action="https://medquire-waitlist.netlify.app" method="GET" target="_blank">
-              <input type="email" name="email" class="waitlist-input" placeholder="Enter your email address" required aria-label="Email address" />
+            <form class="waitlist-form" action="https://docs.google.com/forms/d/e/1FAIpQLSe1GCuT8fXF_7VpcFboeVoQ8zmNq6ojWRX5_kmJFqoVcwT7BQ/formResponse" method="POST" target="_blank">
+              <input type="email" name="entry.1538647705" class="waitlist-input" placeholder="Enter your email address" required aria-label="Email address" />
               <button type="submit" class="waitlist-btn">Get Early Access</button>
             </form>
           </div>
