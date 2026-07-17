@@ -598,17 +598,20 @@ header.sticky-floating .logo-img {
   transform: translateY(0) scale(0.98);
 }
 
-/* Hamburger menu toggle button style */
 .nav-toggle {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0;
   z-index: 1001;
-  min-height: 44px;
-  min-width: 44px;
+  height: 44px;
+  width: 44px;
   position: relative;
+  margin-left: auto; /* Push to the far right of the navbar flexbox on mobile */
 }
 
 .nav-toggle span {
