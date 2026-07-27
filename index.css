@@ -3697,6 +3697,7 @@ footer {
   font-weight: 700;
   color: #0B348E;
   transition: color 0.2s ease;
+  margin: 0;
 }
 
 .faq-trigger:hover .faq-question {
