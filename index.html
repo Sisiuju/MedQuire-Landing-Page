@@ -125,7 +125,7 @@
         "name": "Is my information private?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. Protecting your privacy is a priority. MedQuire is designed to handle your information securely and responsibly."
+          "text": "Yes, absolutely. MedQuire operates under a privacy-first data policy: we never collect sensitive medical records, account data is minimal and secured with Supabase row-level security, search history and preferences stay locally on your device, medication label data is fetched in real time directly from OpenFDA, and we never track health behavior or sell user data to third parties."
         }
       },
       {
@@ -194,6 +194,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#who-it-is-for">Who It's For</a></li>
           <li><a href="#demo">App Preview</a></li>
+          <li><a href="#privacy">Privacy</a></li>
           <li class="mobile-cta-only"><a href="#waitlist" class="btn btn-secondary" style="padding: 0.5rem 1.25rem; font-size: 0.9rem;">Download App</a></li>
         </ul>
         <div class="nav-indicator" id="navIndicator"></div>
@@ -650,7 +651,189 @@
       </div>
     </section>
 
+    <!-- 7. PRIVACY-FIRST DATA POLICY SECTION -->
+    <section class="privacy-section section-padding" id="privacy">
+      <div class="container">
+        
+        <div class="section-header reveal">
+          <div class="privacy-badge-wrapper">
+            <span class="privacy-badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+              Privacy-First Architecture
+            </span>
+          </div>
+          <h2 class="privacy-heading">MedQuire operates under a privacy-first data policy</h2>
+          <p class="privacy-subtext">
+            Your health queries are strictly your personal business. MedQuire is designed so you can safely understand medications without surrendering your private medical records.
+          </p>
+        </div>
 
+        <div class="privacy-grid reveal delay-100">
+          
+          <!-- Pillar 1: Minimal Data Collection -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-icon-badge">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+              </div>
+              <span class="privacy-pillar-tag">Pillar 01</span>
+            </div>
+            <h3 class="privacy-card-title">Minimal Data Collection</h3>
+            <ul class="privacy-points-list">
+              <li class="privacy-point-item">
+                <div class="privacy-point-bullet">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="privacy-point-text">
+                  <strong>No Sensitive Medical Records</strong>
+                  <span>We do not collect or store your full medical history or sensitive health records.</span>
+                </div>
+              </li>
+              <li class="privacy-point-item">
+                <div class="privacy-point-bullet">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="privacy-point-text">
+                  <strong>Minimal User Accounts</strong>
+                  <span>Only basic account information (such as email and full name via Supabase) is stored for registered users.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 2: Local-First & Real-Time Processing -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-icon-badge">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                  <line x1="12" y1="18" x2="12.01" y2="18"/>
+                </svg>
+              </div>
+              <span class="privacy-pillar-tag">Pillar 02</span>
+            </div>
+            <h3 class="privacy-card-title">Local-First &amp; Real-Time Processing</h3>
+            <ul class="privacy-points-list">
+              <li class="privacy-point-item">
+                <div class="privacy-point-bullet">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="privacy-point-text">
+                  <strong>Local Storage</strong>
+                  <span>Search history and preferences are stored locally on your device.</span>
+                </div>
+              </li>
+              <li class="privacy-point-item">
+                <div class="privacy-point-bullet">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="privacy-point-text">
+                  <strong>OpenFDA Fetching</strong>
+                  <span>Medication label information is fetched directly from the official OpenFDA API in real-time.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 3: Secure Authentication -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-icon-badge">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                </svg>
+              </div>
+              <span class="privacy-pillar-tag">Pillar 03</span>
+            </div>
+            <h3 class="privacy-card-title">Secure Authentication</h3>
+            <ul class="privacy-points-list">
+              <li class="privacy-point-item">
+                <div class="privacy-point-bullet">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="privacy-point-text">
+                  <strong>Supabase Security Policies</strong>
+                  <span>Auth and saved cabinet items are protected via Supabase security policies with strict row-level privacy boundaries.</span>
+                </div>
+              </li>
+              <li class="privacy-point-item">
+                <div class="privacy-point-bullet">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="privacy-point-text">
+                  <strong>Strict Row-Level Boundaries</strong>
+                  <span>Cryptographic tenant and row isolation ensures only you can access your saved cabinet medications.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Pillar 4: No Health Data Tracking or Sharing -->
+          <div class="privacy-card">
+            <div class="privacy-card-header">
+              <div class="privacy-icon-badge">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </div>
+              <span class="privacy-pillar-tag">Pillar 04</span>
+            </div>
+            <h3 class="privacy-card-title">No Health Data Tracking or Sharing</h3>
+            <ul class="privacy-points-list">
+              <li class="privacy-point-item">
+                <div class="privacy-point-bullet">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="privacy-point-text">
+                  <strong>Zero Data Selling</strong>
+                  <span>We do not track sensitive health behavior or sell user data to third parties.</span>
+                </div>
+              </li>
+              <li class="privacy-point-item">
+                <div class="privacy-point-bullet">
+                  <svg viewBox="0 0 20 20" fill="currentColor" width="12" height="12"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <div class="privacy-point-text">
+                  <strong>No Ad Retargeting</strong>
+                  <span>No behavioral trackers or third-party ad pixels watch your medication searches.</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Privacy Callout Banner / Trust Guarantee -->
+        <div class="privacy-guarantee-banner reveal delay-200">
+          <div class="privacy-guarantee-content">
+            <div class="privacy-guarantee-icon">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <polyline points="9 12 11 14 15 10"/>
+              </svg>
+            </div>
+            <div class="privacy-guarantee-text">
+              <h4>Transparent &amp; Patient-First By Design</h4>
+              <p>Explore our complete documentation covering data handling, encryption, row-level boundaries, and patient privacy commitments.</p>
+            </div>
+          </div>
+          <a href="privacy.html" class="btn btn-primary privacy-guarantee-btn">
+            Read Full Privacy Policy
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="margin-left: 6px;">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+    </section>
 
     <!-- 8. WAITLIST SIGNUP SECTION -->
     <section class="waitlist-section section-padding" id="waitlist">
@@ -862,7 +1045,7 @@
               </button>
               <div class="faq-panel">
                 <div class="faq-content">
-                  <p>Yes. Protecting your privacy is a priority. MedQuire is designed to handle your information securely and responsibly.</p>
+                  <p>Yes, absolutely. MedQuire operates under a privacy-first data policy: we never collect sensitive medical records, account data is minimal and protected via Supabase row-level security, search history and preferences stay locally on your device, medication label data is fetched in real time directly from OpenFDA, and we never track your health behavior or sell user data to third parties.</p>
                 </div>
               </div>
             </div>
@@ -953,7 +1136,8 @@
       <div class="footer-links-col">
         <h4>Legal & Privacy</h4>
         <ul class="footer-links">
-          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="#privacy">Privacy Principles</a></li>
           <li><a href="#">Terms of Service</a></li>
           <li><a href="#">OpenFDA Disclaimers</a></li>
           <li><a href="mailto:contact@medquire.app">Contact Support</a></li>
